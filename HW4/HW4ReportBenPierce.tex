@@ -1,0 +1,194 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+
+%\documentclass{amsart}
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{hyperref}
+\usepackage{listings}
+
+
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{EECS 233 HW4}
+\author{Ben Pierce \\ \texttt{bgp12@case.edu}}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+
+
+%if anyone's reading this, any Latex tips/tricks would be greatly appreciated. 
+
+\begin{document}
+\maketitle
+\section{Question 1}
+\subsection{A}
+The Big-O time complexity of the $isBalanced()$ method in isBalancedDemonstration.java is $O(n)$. This is because the algorithm has only one loop, going through all numbers $n$ times.
+\subsection{B}
+The new counting algorithm is also $O(n)$, because it also goes through a single loop $n$ times. Although it conducts multiple operations per loop, these operations only cause the time complexity to be multiplied by a constant, which is ignored in Big-O notation. 
+\subsection{C}
+No, the new counting algorithm could not evaluate expressions with all three parentheses without an array or stack. This is because the program could not keep tracking of multiple types of nested parentheses without some way to “hold” them like a stack.
+
+\section{Question 2}
+\subsection{A}
+\begin{tabular}{ | l | l | l |}
+\hline
+Character & Numbers & Operators  \\ \hline
+( & & \\ \hline
+( & &\\ \hline
+( & &\\ \hline
+1 & 1 & \\ \hline
++ & 1 & + \\ \hline
+2 & 1,2 & + \\ \hline
+) & 3 & \\ \hline
++ & 3 & + \\ \hline
+3 & 3,3 & + \\ \hline
+) & 6 & \\ \hline
++ & 6 & + \\ \hline
+4 & 6,4 & + \\ \hline
+) & 10 & \\ \hline
+\end{tabular}
+
+\subsection{B}
+\begin{tabular}{ | l | l | l |}
+\hline
+Character & Numbers & Operators  \\ \hline
+( & & \\ \hline
+1 & 1 & \\ \hline
++ & 1 & + \\ \hline
+( & 1 & + \\ \hline
+2 & 1,2 & + \\ \hline
++ & 1,2 & +,+  \\ \hline
+( & 1,2 & +,+ \\ \hline
+3 & 1,2,3 & + \\ \hline
++ & 1,2,3 & +,+ \\ \hline
+4 & 1,2,3,4 & +,+,+ \\ \hline
+) & 1,2,7 & +,+ \\ \hline
+) & 1,9 & + \\ \hline
+) & 10 & \\ \hline
+\end{tabular}
+
+\subsection{C}
+\begin{tabular}{ | l | l | l |}
+\hline
+Character & Numbers & Operators  \\ \hline
+( & & \\ \hline
+( & &\\ \hline
+( & &\\ \hline
+2 & 2 & \\ \hline
+* & 2 & * \\ \hline
+( & 2 & * \\ \hline
+3 & 2,3 & *\\ \hline
++ & 2,3 & *,+ \\ \hline
+4 & 2,3,4 & *,+ \\ \hline
+) & 2,4 & *\\ \hline
+) & 14 &  \\ \hline
+- & 14 & - \\ \hline
+5 & 14,5 & -\\ \hline
+) & 9 & \\ \hline
+/ & 9 & / \\ \hline
+3 & 9,3 & / \\ \hline
+) & 3 & \\ \hline
+\end{tabular}
+
+\section{Question 3} 
+\begin{lstlisting}
+Please type an arithmetic expression made from
+unsigned numbers and the operations + - * /.
+The expression must be fully parenthesized.
+Your expression: (((1+2)+3)+4)
+Numbers: Operations:
+Numbers: Operations:
+Numbers: Operations:
+Numbers: 1.0 Operations:
+Numbers: 1.0 2.0 Operations:  +
+Numbers: 3.0 Operations:
+Numbers: 3.0 3.0 Operations:  +
+Numbers: 6.0 Operations:
+Numbers: 6.0 4.0 Operations:  +
+The value is 10.0
+Another string? [Y or N]: y
+Your expression: (1+(2+(3+4)))
+Numbers: Operations:
+Numbers: 1.0 Operations:
+Numbers: 1.0 Operations:  +
+Numbers: 1.0 2.0 Operations:  +
+Numbers: 1.0 2.0 Operations:  + +
+Numbers: 1.0 2.0 3.0 Operations:  + +
+Numbers: 1.0 2.0 3.0 4.0 Operations:  + + +
+Numbers: 1.0 2.0 7.0 Operations:  + +
+Numbers: 1.0 9.0 Operations:  +
+The value is 10.0
+Another string? [Y or N]: y
+Your expression: (((2*(3+4))-5)/3)
+Numbers: Operations:
+Numbers: Operations:
+Numbers: Operations:
+Numbers: 2.0 Operations:
+Numbers: 2.0 Operations:  *
+Numbers: 2.0 3.0 Operations:  *
+Numbers: 2.0 3.0 4.0 Operations:  * +
+Numbers: 2.0 7.0 Operations:  *
+Numbers: 14.0 Operations:
+Numbers: 14.0 5.0 Operations:  -
+Numbers: 9.0 Operations:
+Numbers: 9.0 3.0 Operations:  /
+The value is 3.0
+\end{lstlisting}
+
+\section{Question 4}
+a) (((3-7)/8)-3) \\
+b) ((5-8)-(3/7))
+\section{Question 5}
+a)4 6 2 - 8 /- \\
+b)4 6 2 / 8 - -
+
+
+\end{document}

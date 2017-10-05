@@ -1,0 +1,523 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"prin",
+				"println()\tfunc"
+			],
+			[
+				"A",
+				"ADDEND_ALG3"
+			],
+			[
+				"ADD",
+				"ADDEND_ALG2"
+			],
+			[
+				"pr",
+				"println"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE4CCEC/Permutation.java",
+			"settings":
+			{
+				"buffer_size": 1920,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/bp001/Documents/EECS223/HW2/Permutation.java",
+			"settings":
+			{
+				"buffer_size": 2136,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE564BE/Timing.java",
+			"settings":
+			{
+				"buffer_size": 853,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE722BF/Timing2.java",
+			"settings":
+			{
+				"buffer_size": 864,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE006AE/PuzzleSolver.java",
+			"settings":
+			{
+				"buffer_size": 1959,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/bp001/AppData/Local/Temp/7zOC4C9D0B2/PuzzleSolver2.java",
+			"settings":
+			{
+				"buffer_size": 3539,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/User/build.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/build.sublime-build",
+					""
+				],
+				[
+					"Packages/User/build.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/build.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"javac",
+				"Build With: JavaC"
+			],
+			[
+				"packa",
+				"Package Control: Enable Package"
+			]
+		],
+		"width": 549.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/bp001/AppData/Local/Temp/7zOC80CC5A3/Example1.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zOC68DA529/Timing.java",
+		"/C/Users/bp001/Documents/EECS223/HW3/ListDemonstration.java",
+		"/C/Users/bp001/Documents/EECS223/HW3/IntArrayBagTest.java",
+		"/C/Users/bp001/Documents/EECS223/HW3/IntNode.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0DE68CEC/Timing.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0DE97FEC/Timing2.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0DE83FEC/PuzzleSolver.java",
+		"/C/Users/bp001/Documents/EECS223/HW3/IntLinkedBag.java",
+		"/C/Users/bp001/Documents/EECS223/HW3/BagTestLoop.java",
+		"/C/Users/bp001/Documents/EECS223/HW3/IntArrayBag.java",
+		"/C/Users/bp001/Documents/EECS223/HW3/BagTest.java",
+		"/C/Users/bp001/Documents/EECS223/HW3/BagDemonstration.java",
+		"/C/Users/bp001/Documents/EECS223/HW3/test.java",
+		"/C/Users/bp001/Documents/EECS223/HW1/Graph.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO06A27189/StringNode.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO06A59189/StringListDemonstration.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO06A7C189/StringLinkedBag.java",
+		"/C/Users/bp001/Documents/EECS223/HW2/solutions/Timing.java",
+		"/C/Users/bp001/Documents/EECS223/HW2/solutions/Timing2.java",
+		"/C/Users/bp001/Documents/EECS223/HW2/solutions/PuzzleSolver.java",
+		"/C/Users/bp001/Documents/EECS223/HW2/solutions/Permutation.java",
+		"/C/Users/bp001/Documents/EECS223/HW2/solutions/HW2 - report.docx",
+		"/C/Users/bp001/Documents/EECS223/HW3/HW3.pdf",
+		"/C/Users/bp001/Documents/EECS223/HW2/PuzzleSolver2.java",
+		"/C/Users/bp001/Documents/EECS223/HW2/PermutationTest.java",
+		"/C/Users/bp001/Documents/EECS223/HW2/PuzzleSolver3.java",
+		"/C/Users/bp001/Documents/EECS223/HW2/Permutation.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO068B3096/IntLinkedBag.java",
+		"/C/Users/bp001/Documents/EECS223/HW2/Puzzle with 2 traits.png",
+		"/C/Users/bp001/Documents/EECS223/HW1/Grapher.java",
+		"/C/Users/bp001/Documents/EECS223/test.java",
+		"/C/Users/bp001/Documents/EECS223/HW2/HW2.pdf",
+		"/C/Users/bp001/Documents/EECS223/HW2/PermutationIncomplete.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zOC9D980EB/IntArrayBag.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zOC9D1469E/PuzzleSolver.java",
+		"/C/Users/bp001/Documents/EECS223/HW1/Problem3.java",
+		"/C/Users/bp001/Documents/EECS223/HW1/Problem2.java",
+		"/C/Users/bp001/Documents/EECS223/HW1/Problem1.java",
+		"/C/Users/bp001/Documents/EECS223/HW1/BenPierceHW1/Graph.java",
+		"/C/Users/bp001/Documents/EECS223/HW1/Example1.java",
+		"/C/Users/bp001/AppData/Roaming/Sublime Text 3/Packages/User/build.sublime-build",
+		"/C/Users/bp001/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/bp001/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/bp001/Documents/EECS223/HW1/Example2.java",
+		"/C/Program Files/Java/jdk1.8.0_144/bin/javac.exe"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"get",
+			"size",
+			"getCapa",
+			"ensure",
+			"add",
+			"ensure",
+			"add",
+			"countOcc",
+			"search"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE4CCEC/Permutation.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1920,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								191,
+								191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 120.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/bp001/Documents/EECS223/HW2/Permutation.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								212,
+								212
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE564BE/Timing.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 853,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								133,
+								133
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE722BF/Timing2.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								477,
+								477
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE006AE/PuzzleSolver.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1959,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "/C/Users/bp001/AppData/Local/Temp/7zOC4C9D0B2/PuzzleSolver2.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.973958333333,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 130.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Java/JavaC.sublime-build",
+	"project": "HW1P.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
