@@ -10,7 +10,7 @@ public class Fractal3 extends JPanel {
     JFrame f = new JFrame();
 	int randomGeneratorSeed = 10; // Ajusts seed for randomNumberGenerator
 	Random rng = new Random(); // Random number generator
-	 int MAX_RECURSION = 1;  // maximum recursion level
+	int maxLevel = 1;  // initial maximum recursion level
 
     public static void main(String[] args){
         Fractal3 f = new Fractal3();
@@ -21,11 +21,10 @@ public class Fractal3 extends JPanel {
         f.setSize(1500, 1000);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Ensure that program terminates when window is closed
         f.setVisible(true); // Call paintComponent() first time
-		
-		for(int j = 0; j < 10; j++){
-			for (long i = 0; i < 100000; i++); // Delay before rerunning with new STOP value
+		for(int j= 0; j < 10; j++){
+			maxLevel++;
+			for (long i = 0; i < 1000000000; i++);// Delay before rerunning with new STOP value
 			f.repaint();  // Call paintComponent() again to rerun
-			MAX_RECURSION++;
 		}
 
     }
@@ -38,14 +37,15 @@ public class Fractal3 extends JPanel {
         int height = getHeight();
 		drawingArea.fill(new Ellipse2D.Double(-5, height/2-5, 10, 10));
 		drawingArea.fill(new Ellipse2D.Double(width-5, height/2-5, 10, 10));
-		randomFractal(0, height/2, width, height/2, drawingArea,1);
+		int recursionLevel = 0;
+		randomFractal(0, height/2, width, height/2, drawingArea,recursionLevel);
     }
 
 	public void randomFractal(int leftX, int leftY, int rightX, int rightY, Graphics2D drawingArea, int recursionLevel)	{
 		int midX, midY;      // Midpoints in the x and y dimensions
 		int delta;           // Amount to shift the line's midpoint up or down
 
-		if (recursionLevel >= MAX_RECURSION){
+		if (recursionLevel >= maxLevel){
 			drawingArea.draw(new Line2D.Double(leftX, leftY, rightX, rightY));
 			System.out.println(recursionLevel);
 		}
@@ -59,7 +59,6 @@ public class Fractal3 extends JPanel {
 			drawingArea.fill(new Ellipse2D.Double(midX-5, midY-5, 10, 10));
 			randomFractal(leftX, leftY, midX,   midY,   drawingArea, recursionLevel++);
 			randomFractal(midX,  midY,  rightX, rightY, drawingArea, recursionLevel++);
-
 		}
 	}
 }
