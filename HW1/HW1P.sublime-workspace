@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"IllegalArgumentExceptio",
+				"ILLEGALARGUMENTEXCEPTION\tCom Class"
+			],
+			[
 				"prin",
 				"println()\tfunc"
 			],
@@ -23,46 +27,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE4CCEC/Permutation.java",
-			"settings":
-			{
-				"buffer_size": 1920,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/bp001/Documents/EECS223/HW2/Permutation.java",
-			"settings":
-			{
-				"buffer_size": 2136,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE564BE/Timing.java",
-			"settings":
-			{
-				"buffer_size": 853,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE722BF/Timing2.java",
-			"settings":
-			{
-				"buffer_size": 864,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE006AE/PuzzleSolver.java",
-			"settings":
-			{
-				"buffer_size": 1959,
-				"line_ending": "Windows"
-			}
-		},
 		{
 			"file": "/C/Users/bp001/AppData/Local/Temp/7zOC4C9D0B2/PuzzleSolver2.java",
 			"settings":
@@ -152,6 +116,34 @@
 	},
 	"file_history":
 	[
+		"/C/Users/bp001/Documents/EECS223/HW5/Fractal3.java",
+		"/C/Users/bp001/Documents/EECS223/HW5/Question12.java",
+		"/C/Users/bp001/Documents/EECS223/HW5/Fractal3Chris.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO46490AAC/Fractal2.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO464FCBAC/Fractal.java",
+		"/C/Users/bp001/Documents/EECS223/HW5/Fractal3.class",
+		"/C/Users/bp001/Documents/EECS223/HW5/Question12.class",
+		"/C/Users/bp001/Documents/EECS223/HW5/HW5.pdf",
+		"/C/Users/bp001/Documents/EECS223/HW5/Fractal3Chris.class",
+		"/C/Users/bp001/Documents/EECS223/test.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO4649D75B/Maze.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO46484AAC/Fractal3.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/EvaluateDemonstration.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/Postfix.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/ArrayStack.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/ArrayStackDemo.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/Node.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/LinkedStack.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/LinkedStackDemo.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/balancedParens.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/IsBalancedDemonstration.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/postfix.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0DE4CCEC/Permutation.java",
+		"/C/Users/bp001/Documents/EECS223/HW2/Permutation.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0DE722BF/Timing2.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0DE564BE/Timing.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0DE006AE/PuzzleSolver.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/HW4.pdf",
 		"/C/Users/bp001/AppData/Local/Temp/7zOC80CC5A3/Example1.java",
 		"/C/Users/bp001/AppData/Local/Temp/7zOC68DA529/Timing.java",
 		"/C/Users/bp001/Documents/EECS223/HW3/ListDemonstration.java",
@@ -179,11 +171,9 @@
 		"/C/Users/bp001/Documents/EECS223/HW2/PuzzleSolver2.java",
 		"/C/Users/bp001/Documents/EECS223/HW2/PermutationTest.java",
 		"/C/Users/bp001/Documents/EECS223/HW2/PuzzleSolver3.java",
-		"/C/Users/bp001/Documents/EECS223/HW2/Permutation.java",
 		"/C/Users/bp001/AppData/Local/Temp/7zO068B3096/IntLinkedBag.java",
 		"/C/Users/bp001/Documents/EECS223/HW2/Puzzle with 2 traits.png",
 		"/C/Users/bp001/Documents/EECS223/HW1/Grapher.java",
-		"/C/Users/bp001/Documents/EECS223/test.java",
 		"/C/Users/bp001/Documents/EECS223/HW2/HW2.pdf",
 		"/C/Users/bp001/Documents/EECS223/HW2/PermutationIncomplete.java",
 		"/C/Users/bp001/AppData/Local/Temp/7zOC9D980EB/IntArrayBag.java",
@@ -201,7 +191,7 @@
 	],
 	"find":
 	{
-		"height": 43.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
@@ -241,154 +231,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE4CCEC/Permutation.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1920,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								191,
-								191
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 120.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/bp001/Documents/EECS223/HW2/Permutation.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2136,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								212,
-								212
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE564BE/Timing.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 853,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								133,
-								133
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE722BF/Timing2.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 864,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								477,
-								477
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/Users/bp001/AppData/Local/Temp/7zO0DE006AE/PuzzleSolver.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1959,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				}
 			]
 		},
 		{
@@ -396,7 +240,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 5,
+					"buffer": 0,
 					"file": "/C/Users/bp001/AppData/Local/Temp/7zOC4C9D0B2/PuzzleSolver2.java",
 					"semi_transient": false,
 					"settings":
@@ -421,7 +265,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -429,7 +273,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -477,7 +321,7 @@
 	"project": "HW1P.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 59.0
 	},
 	"save_all_on_build": true,
 	"select_file":
