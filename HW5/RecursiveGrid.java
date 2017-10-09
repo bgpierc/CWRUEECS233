@@ -2,17 +2,17 @@
 import java.util.*;
 public class RecursiveGrid{
 	public static void main(String[] args){
-		navigate();
+		navigate(); // initial call
 	}
 	public static void navigate(){
 		Scanner sc = new Scanner(System.in); 
 		System.out.println("Enter a direction for a step (s=straight, l=left, r=right, q=quit): ");
 		String input =  sc.nextLine();
-		if(input.equals("q")){
-			System.out.println("Turn 180 degrees");
-		}
+
+		if(input.equals("q")) //end case
+			System.out.println("Turn 180 degrees"); //when end marker is input, turn around
 		else{
-			navigate();
+			navigate(); //recursive call
 			if(input.equals("l"))
 				System.out.println("Take a step and turn right");
 			else if(input.equals("r"))

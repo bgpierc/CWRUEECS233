@@ -1,13 +1,11 @@
 //Ben Pierce (bgp12)
 import java.util.*;
-public class Grid{
-	
+public class Grid{	
 	Stack stack = new Stack();
 	public static void main(String[] args){
 		Grid g = new Grid();
 		while(g.navigate());
 	}
-
 	public String getInput(){
 		Scanner sc = new Scanner(System.in);
 		return sc.next();
@@ -40,5 +38,4 @@ public class Grid{
 		}
 		return true;
 	}
-
 }

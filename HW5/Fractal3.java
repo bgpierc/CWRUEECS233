@@ -1,6 +1,4 @@
-// Chris Fietkiewicz. Draws fractal line with dots. Based on Fractal.java by Michael Main.
-// Similar to Fractal2.java, but shows exact points. Also uses slightly
-// different random number generation that is useful for the homework assignment.
+//Ben Pierce (bgp12)
 import java.util.*;
 import java.awt.*;
 import java.awt.geom.*;
@@ -49,6 +47,7 @@ public class Fractal3 extends JPanel {
 			System.out.println(recursionLevel); //test
 		}
 		else {
+			recursionLevel++;
 			midX = (leftX + rightX) / 2;
 			midY = (leftY + rightY) / 2;
 			rng.setSeed((long) (midX << randomGeneratorSeed)); // Seed random number generator based on x-pixel (useful for homework)
@@ -56,8 +55,8 @@ public class Fractal3 extends JPanel {
 			midY += delta;
 			drawingArea.setPaint(Color.BLACK);
 			drawingArea.fill(new Ellipse2D.Double(midX-5, midY-5, 10, 10));
-			randomFractal(leftX, leftY, midX,   midY,   drawingArea, recursionLevel++); //every time randomFractal() is called, increment recursion level
-			randomFractal(midX,  midY,  rightX, rightY, drawingArea, recursionLevel++);
+			randomFractal(leftX, leftY, midX,   midY,   drawingArea, recursionLevel); //every time randomFractal() is called, increment recursion level
+			randomFractal(midX,  midY,  rightX, rightY, drawingArea, recursionLevel);
 		}
 	}
 }
