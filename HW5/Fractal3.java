@@ -44,7 +44,6 @@ public class Fractal3 extends JPanel {
 
 		if (recursionLevel >= maxLevel){ // if the recursion level exceeds the maximum level, stop.
 			drawingArea.draw(new Line2D.Double(leftX, leftY, rightX, rightY));
-			System.out.println(recursionLevel); //test
 		}
 		else {
 			recursionLevel++;

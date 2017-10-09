@@ -3,6 +3,7 @@ import java.util.*;
 public class RecursiveGrid{
 	public static void main(String[] args){
 		navigate(); // initial call
+		System.out.println("You have arrived where you started!");
 	}
 	public static void navigate(){
 		Scanner sc = new Scanner(System.in); 
