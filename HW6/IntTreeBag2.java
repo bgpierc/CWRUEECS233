@@ -1,4 +1,4 @@
-// Chris Fietkiewicz. Based on IntTreeBag.java from the package edu.colorado.collections
+//Ben Pierce (bgp12)
 public class IntTreeBag2 implements Cloneable
 {
    // Invariant of the IntTreeBag class:
@@ -10,15 +10,9 @@ public class IntTreeBag2 implements Cloneable
 
 public static void main(String[] args){
    IntTreeBag2 bag = new IntTreeBag2();
-   bag.add(9);
-   bag.add(3);
-   bag.add(2);
-   bag.add(1);
-   bag.add(6);
-   bag.add(5);
-   bag.add(4);
-   bag.add(7);
-   bag.add(8);
+   for(int i = 1; i <10 ;i++){
+      bag.add(i);
+   }
    System.out.println("Preorder Print method: ");
    bag.preorderPrint();
    System.out.println("Inorder Print method: ");
@@ -46,25 +40,25 @@ public static void main(String[] args){
       IntBTNode cursor = root;
       boolean done = false;
       while(!done){
-         if(root == null){
+         if(root == null){ //if there's nothing in the bag
             root = new IntBTNode(element,null,null);
             done = true;
          }
-         else if(element < cursor.getData()){
-            if(cursor.getLeft() == null){
+         else if(element < cursor.getData()){ 
+            if(cursor.getLeft() == null){ //if there's nothing on the left, insert here
                cursor.setLeft(new IntBTNode(element,null,null));
                done = true;
             }
             else
-               cursor = cursor.getLeft();
+               cursor = cursor.getLeft(); //move left
          }
          else if(element > cursor.getData()){
-            if(cursor.getRight() == null){
+            if(cursor.getRight() == null){ //if there's nothing on the right, insert here
                cursor.setRight(new IntBTNode(element,null,null));
                done = true;
             }
             else
-               cursor = cursor.getRight();
+               cursor = cursor.getRight(); //move right
          }
       }
    }
@@ -82,7 +76,7 @@ public static void main(String[] args){
    {
       IntBTNode cursor = root;
       IntBTNode parentOfCursor = null;
-      while(cursor.getData() != target && cursor != null)
+      while(cursor.getData() != target && cursor != null) //find element to remove
       {
          if(target < cursor.getData()){
             parentOfCursor = cursor;
@@ -93,22 +87,22 @@ public static void main(String[] args){
             cursor = cursor.getRight();
          }
       }
-      if(cursor == null)
+      if(cursor == null) // if it isn't found, we can't remove it
          return false;
-      else if(cursor == root && root.getLeft() == null){
+      else if(cursor == root && root.getLeft() == null){ //if the cursor is the root and it doesn't have a left child
          root = root.getRight(); //we'll let the garbage collector take care of that
          return true;
       }
-      else if(cursor.getLeft() == null){
+      else if(cursor.getLeft() == null){ // if the cursor doesn't have a left child
          if(cursor == parentOfCursor.getLeft())
             parentOfCursor.setLeft(cursor.getRight());
          else
             parentOfCursor.setRight(cursor.getRight());
          return true;
       }
-      else if(cursor != null && cursor.getLeft() != null){
-         cursor.setData(cursor.getLeft().getRightmostData());
-         cursor.setLeft(cursor.getLeft().removeRightmost());
+      else if(cursor != null && cursor.getLeft() != null){ //if the cursor isn't at the end and it has a left child, we can't outright remove it
+         cursor.setData(cursor.getLeft().getRightmostData()); //move biggest node on the rightmost side of the tree after the cursor
+         cursor.setLeft(cursor.getLeft().removeRightmost()); //remove node we just moved
          return true;
       }
       return false; //should never reach this point
