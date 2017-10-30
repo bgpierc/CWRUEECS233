@@ -1,0 +1,191 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+
+%\documentclass{amsart}
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{movie15}
+\usepackage{graphicx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{EECS 233 HW7}
+\author{Ben Pierce \\ \texttt{bgp12@case.edu}}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+
+
+
+%if anyone's reading this, any Latex tips/tricks would be greatly appreciated. 
+
+\begin{document}
+\maketitle
+\title {GitHub: https://github.com/bp0017/CWRUEECS233/tree/master/HW7} 
+
+\section{Question 1}
+
+a)\\
+\includegraphics[scale = 0.5]{a.png}
+
+b)\\
+\includegraphics[scale = 0.5]{b.png}
+
+c)\\
+\includegraphics[scale =0.5]{c.png}
+
+d)\\
+\includegraphics[scale = 0.5]{d.png}
+
+e)\\
+\includegraphics[scale =0.5]{e.png}
+
+f)\\
+\includegraphics[scale = 0.5]{f.png}
+
+g)\\
+\includegraphics[scale = 0.5]{g.png}
+
+h)\\
+\includegraphics[scale = 0.5]{h.png}
+
+i)\\
+\includegraphics[scale = 0.5]{i.png}
+
+j)\\
+\includegraphics[scale = 0.5]{j.png}
+
+k)\\
+\includegraphics[scale = 0.5]{k.png}
+
+l)\\
+\includegraphics[scale = 0.5]{l.png}
+
+m)\\
+\includegraphics[scale = 0.5]{m.png}
+
+n)\\
+\includegraphics[scale = 0.5]{n.png}
+
+\section{Question 2}
+\begin{lstlisting}
+C:\Users\bp001\Documents\EECS223\HW7>java Heap
+Adding values...
+[0] 8
+[1] 5
+[2] 7
+[3] 4
+[4] 3
+[5] 2
+[6] 6
+[7] 1
+Removing... 8
+[0] 7
+[1] 5
+[2] 2
+[3] 4
+[4] 3
+[5] 1
+[6] 6
+Removing... 7
+[0] 6
+[1] 5
+[2] 2
+[3] 4
+[4] 3
+[5] 1
+Removing... 6
+[0] 5
+[1] 4
+[2] 2
+[3] 1
+[4] 3
+Removing... 5
+[0] 4
+[1] 3
+[2] 2
+[3] 1
+Removing... 4
+[0] 3
+[1] 1
+[2] 2
+Removing... 3
+[0] 2
+[1] 1
+\end{lstlisting}
+
+\section{Question 3}
+\includegraphics{graph.png}
+\\blue= IntArrayBag, red = Heap
+\\y-axis in ms
+\section{Question 4}
+a) The add operation for the IntArrayBag class is $O(1)$ because it adds a single element to the end of an array with one assignment.
+\\b) The remove operation for the IntArrayBag where the element is the last item of the array is $O(N)$ because the remove method has to search through the entire array of length $N$.
+\\c) The sum of the add and remove operations for the IntArrayBag class is $O(N)$, because as $N$ gets larger, the $O(1)$ time of the add operation becomes less important.
+\\d) The add method for the Heap class where the element added is larger then the root is $O(log N)$ because the element needs to shift the entire height of the tree, which is $log N$ where N is the height of the tree.
+\\e) The removeMax() method for the Heap class is worst-case $O(log N)$ because at the worst case, the element swapped to the root of the tree has to sift downwards through the whole tree of height $log N$.
+\\f) The sum of the add and removeMax methods for the Heap class is $O(log N)$ because two methods with time complexity $log N$ are summed together, causing the resulting time complexity to be $2*log N$, which simplifies to $O(log N)$.
+
+\section{Question 5}
+The experimental results do not really agree with the expected results; for large N the heap times would be expected to plateau, whereas the IntArrayBag times would be expected to increase in a linear fashion. The experimental results have both at constant time. This is probably due to experimental (programming) error.
+
+
+
+
+
+\end{document}

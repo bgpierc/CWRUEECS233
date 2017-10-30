@@ -28,6 +28,22 @@
 	"buffers":
 	[
 		{
+			"file": "/C/Users/bp001/Documents/EECS223/HW7/Grapher2.java",
+			"settings":
+			{
+				"buffer_size": 5253,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/bp001/Documents/EECS223/HW7/Heap.java",
+			"settings":
+			{
+				"buffer_size": 1450,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "/C/Users/bp001/AppData/Local/Temp/7zOC4C9D0B2/PuzzleSolver2.java",
 			"settings":
 			{
@@ -116,7 +132,36 @@
 	},
 	"file_history":
 	[
+		"/C/Users/bp001/Documents/EECS223/HW5/Question1.java",
+		"/C/Users/bp001/Documents/EECS223/HW5/Grid.java",
+		"/C/Users/bp001/Documents/EECS223/HW5/Fractal2.java",
+		"/C/Users/bp001/Documents/EECS223/HW5/RecursiveGrid.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/EvaluateDemonstration.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/LinkedStack.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/balancedParens.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/Postfix.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/IsBalancedDemonstration.java",
+		"/C/Users/bp001/Documents/EECS223/HW4/ArrayStack.java",
+		"/C/Users/bp001/Documents/EECS223/HW6/IntTreeBag2.java",
+		"/C/Users/bp001/Documents/EECS223/HW6/BTNode.java",
+		"/C/Users/bp001/Documents/programming/Sequences.java",
+		"/C/Users/bp001/Downloads/Sequences.java",
+		"/C/Users/bp001/Documents/EECS223/HW6/IntBTNodeDemo.java",
+		"/C/Users/bp001/Documents/EECS223/HW6/TraversalExample2.java",
+		"/C/Users/bp001/Documents/EECS223/HW6/TraversalExample1.java",
+		"/C/Users/bp001/Documents/EECS223/HW6/IntTreeBag.java",
+		"/C/Users/bp001/Documents/EECS223/HW6/IntBTNode.java",
+		"/C/Users/bp001/Documents/EECS223/HW6/Heap.java",
+		"/C/Users/bp001/Documents/EECS223/HW6/HW6.pdf",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0F4A32C7/BTNodeDemo.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0F4B62C7/StackTraceDumper.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0F4C52C7/IntTreeBag.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0F4E83C7/IntBTNode.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0F4FF3C7/BTNode.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0F40D3C7/AnimalGuess.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO0F4AE7E7/IntTreeBag.java",
 		"/C/Users/bp001/Documents/EECS223/HW5/Fractal3.java",
+		"/C/Users/bp001/Documents/EECS223/HW5/RecursiveGrid.class",
 		"/C/Users/bp001/Documents/EECS223/HW5/Question12.java",
 		"/C/Users/bp001/Documents/EECS223/HW5/Fractal3Chris.java",
 		"/C/Users/bp001/AppData/Local/Temp/7zO46490AAC/Fractal2.java",
@@ -128,15 +173,9 @@
 		"/C/Users/bp001/Documents/EECS223/test.java",
 		"/C/Users/bp001/AppData/Local/Temp/7zO4649D75B/Maze.java",
 		"/C/Users/bp001/AppData/Local/Temp/7zO46484AAC/Fractal3.java",
-		"/C/Users/bp001/Documents/EECS223/HW4/EvaluateDemonstration.java",
-		"/C/Users/bp001/Documents/EECS223/HW4/Postfix.java",
-		"/C/Users/bp001/Documents/EECS223/HW4/ArrayStack.java",
 		"/C/Users/bp001/Documents/EECS223/HW4/ArrayStackDemo.java",
 		"/C/Users/bp001/Documents/EECS223/HW4/Node.java",
-		"/C/Users/bp001/Documents/EECS223/HW4/LinkedStack.java",
 		"/C/Users/bp001/Documents/EECS223/HW4/LinkedStackDemo.java",
-		"/C/Users/bp001/Documents/EECS223/HW4/balancedParens.java",
-		"/C/Users/bp001/Documents/EECS223/HW4/IsBalancedDemonstration.java",
 		"/C/Users/bp001/Documents/EECS223/HW4/postfix.java",
 		"/C/Users/bp001/AppData/Local/Temp/7zO0DE4CCEC/Permutation.java",
 		"/C/Users/bp001/Documents/EECS223/HW2/Permutation.java",
@@ -205,6 +244,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"add",
+			"search",
+			"insert",
 			"get",
 			"size",
 			"getCapa",
@@ -231,8 +273,68 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/bp001/Documents/EECS223/HW7/Grapher2.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/bp001/Documents/EECS223/HW7/Heap.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1450,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								489,
+								489
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		},
 		{
@@ -240,7 +342,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 0,
+					"buffer": 2,
 					"file": "/C/Users/bp001/AppData/Local/Temp/7zOC4C9D0B2/PuzzleSolver2.java",
 					"semi_transient": false,
 					"settings":
@@ -265,7 +367,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

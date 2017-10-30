@@ -10,7 +10,7 @@ public class IntTreeBag2 implements Cloneable
 
 public static void main(String[] args){
    IntTreeBag2 bag = new IntTreeBag2();
-   for(int i = 1; i <10 ;i++){
+   for(int i = 1; i <13 ;i++){
       bag.add(i);
    }
    System.out.println("Preorder Print method: ");
