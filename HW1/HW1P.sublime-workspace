@@ -28,18 +28,10 @@
 	"buffers":
 	[
 		{
-			"file": "/C/Users/bp001/Documents/EECS223/HW7/Grapher2.java",
+			"file": "/C/Users/bp001/Documents/EECS223/HW8/BinarySearcher.java",
 			"settings":
 			{
-				"buffer_size": 5253,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/bp001/Documents/EECS223/HW7/Heap.java",
-			"settings":
-			{
-				"buffer_size": 1450,
+				"buffer_size": 3795,
 				"line_ending": "Windows"
 			}
 		},
@@ -132,6 +124,18 @@
 	},
 	"file_history":
 	[
+		"/C/Users/bp001/Documents/EECS223/HW8/Table2.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO88DA9098/Table.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO88DDD098/HashDemo.java",
+		"/C/Users/bp001/Documents/EECS223/HW8/BinarySearcher.java",
+		"/C/Users/bp001/Documents/EECS223/HW8/HW8.pdf",
+		"/C/Users/bp001/Documents/EECS223/HW7/Heap.java",
+		"/C/Users/bp001/Documents/EECS223/HW7/IntArrayBag.java",
+		"/C/Users/bp001/Documents/EECS223/HW7/Graph.java",
+		"/C/Users/bp001/Documents/EECS223/HW1/Graph.java",
+		"/C/Users/bp001/Documents/EECS223/HW7/Grapher2.java",
+		"/C/Users/bp001/Documents/EECS223/HW1/Grapher.java",
+		"/C/Users/bp001/AppData/Local/Temp/7zO4A206CD8/Heap.java",
 		"/C/Users/bp001/Documents/EECS223/HW5/Question1.java",
 		"/C/Users/bp001/Documents/EECS223/HW5/Grid.java",
 		"/C/Users/bp001/Documents/EECS223/HW5/Fractal2.java",
@@ -197,7 +201,6 @@
 		"/C/Users/bp001/Documents/EECS223/HW3/BagTest.java",
 		"/C/Users/bp001/Documents/EECS223/HW3/BagDemonstration.java",
 		"/C/Users/bp001/Documents/EECS223/HW3/test.java",
-		"/C/Users/bp001/Documents/EECS223/HW1/Graph.java",
 		"/C/Users/bp001/AppData/Local/Temp/7zO06A27189/StringNode.java",
 		"/C/Users/bp001/AppData/Local/Temp/7zO06A59189/StringListDemonstration.java",
 		"/C/Users/bp001/AppData/Local/Temp/7zO06A7C189/StringLinkedBag.java",
@@ -212,7 +215,6 @@
 		"/C/Users/bp001/Documents/EECS223/HW2/PuzzleSolver3.java",
 		"/C/Users/bp001/AppData/Local/Temp/7zO068B3096/IntLinkedBag.java",
 		"/C/Users/bp001/Documents/EECS223/HW2/Puzzle with 2 traits.png",
-		"/C/Users/bp001/Documents/EECS223/HW1/Grapher.java",
 		"/C/Users/bp001/Documents/EECS223/HW2/HW2.pdf",
 		"/C/Users/bp001/Documents/EECS223/HW2/PermutationIncomplete.java",
 		"/C/Users/bp001/AppData/Local/Temp/7zOC9D980EB/IntArrayBag.java",
@@ -244,6 +246,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\t\t\n",
 			"add",
 			"search",
 			"insert",
@@ -273,16 +276,16 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/bp001/Documents/EECS223/HW7/Grapher2.java",
+					"file": "/C/Users/bp001/Documents/EECS223/HW8/BinarySearcher.java",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5253,
+						"buffer_size": 3795,
 						"regions":
 						{
 						},
@@ -296,40 +299,11 @@
 						"settings":
 						{
 							"syntax": "Packages/Java/Java.sublime-syntax",
-							"tab_size": 4,
+							"tab_size": 3,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/bp001/Documents/EECS223/HW7/Heap.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1450,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								489,
-								489
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2355.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -342,7 +316,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "/C/Users/bp001/AppData/Local/Temp/7zOC4C9D0B2/PuzzleSolver2.java",
 					"semi_transient": false,
 					"settings":
@@ -367,7 +341,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -413,13 +387,13 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 130.0
+		"height": 452.0
 	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "Packages/Java/JavaC.sublime-build",
+	"pinned_build_system": "Packages/User/build.sublime-build",
 	"project": "HW1P.sublime-project",
 	"replace":
 	{
