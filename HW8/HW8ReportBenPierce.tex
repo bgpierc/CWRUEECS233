@@ -1,0 +1,249 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+
+%\documentclass{amsart}
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{movie15}
+\usepackage{graphicx}
+\usepackage{tabu}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{EECS 233 HW8}
+\author{Ben Pierce \\ \texttt{bgp12@case.edu}}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+
+
+
+%if anyone's reading this, any Latex tips/tricks would be greatly appreciated. 
+
+\begin{document}
+\maketitle
+\title {GitHub: https://github.com/bp0017/CWRUEECS233/tree/master/HW8} 
+
+\section{Question 1: Program Output}
+\subsection{A}
+\begin{lstlisting}
+C:\Users\bp001\Documents\EECS223\HW8>java BinarySearcher
+Searching for numbers in an array.
+Is -1 in the array? No.
+Is 0 in the array? No.
+Is 1 in the array? No.
+Is 2 in the array? Yes, at index [0].
+Is 3 in the array? No.
+Is 4 in the array? Yes, at index [1].
+Is 5 in the array? No.
+Is 6 in the array? Yes, at index [2].
+Is 7 in the array? No.
+Is 8 in the array? Yes, at index [3].
+Is 9 in the array? No.
+Is 10 in the array? Yes, at index [4].
+Is 11 in the array? No.
+Is 12 in the array? Yes, at index [5].
+Is 13 in the array? No.
+Is 14 in the array? Yes, at index [6].
+Is 15 in the array? No.
+Is 16 in the array? No.
+Searching for 0 in an empty array:  Not found.
+End of searching.
+\end{lstlisting}
+
+\subsection{B}
+\begin{lstlisting}
+Searching for numbers in an array.
+Is -1 in the array?  Searching before 3  Searching before 1  Searching before 0 No.
+Is 0 in the array?  Searching before 3  Searching before 1  Searching before 0 No.
+Is 1 in the array?  Searching before 3  Searching before 1  Searching before 0 No.
+Is 2 in the array?  Searching before 3  Searching before 1  Found at index 0
+Is 3 in the array?  Searching before 3  Searching before 1  Searching after 0 No.
+Is 4 in the array?  Searching before 3  Found at index 1
+Is 5 in the array?  Searching before 3  Searching after 1 
+Searching before 2 No.
+Is 6 in the array?  Searching before 3  Searching after 1 
+Found at index 2
+Is 7 in the array?  Searching before 3  Searching after 1 
+Searching after 2 No.
+Is 8 in the array?  Found at index 3
+Is 9 in the array?  Searching after 3 Searching before 5  
+Searching before 4 No.
+Is 10 in the array?  Searching after 3 Searching before 5  
+Found at index 4
+Is 11 in the array?  Searching after 3 Searching before 5  
+Searching after 4 No.
+Is 12 in the array?  Searching after 3 Found at index 5
+Is 13 in the array?  Searching after 3 Searching after 5 No.
+Is 14 in the array?  Searching after 3 Searching after 5 No.
+Is 15 in the array?  Searching after 3 Searching after 5 No.
+Is 16 in the array?  Searching after 3 Searching after 5 No.
+Searching for 0 in an empty array:  Not found.
+End of searching.
+\end{lstlisting}
+\section{Question 2}
+\subsection{A}
+\begin{lstlisting}
+[1,3,2,4,6,5] Target = 1.
+\end{lstlisting}
+\subsection{B}
+If the array was checked to be sorted before the search, the total runtime would be $N + \log_{2}N$ = $O(N)$ because the time to verify that an array is sorted is linear time, plus the time to search. This equals $O(N)$ because $N$ time is larger then $\log_{2}N$.
+\section{Question 3}
+\subsection{A}
+\noindent\resizebox{\textwidth}{!}{
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| } 
+ \hline
+ Key & Calculation & [0] & [1] & [2] & [3] & [4] & [5] & [6] & [7] & [8] & [9] & [10] & [11] & [12]\\ \hline
+ 1 & 1\%13 = 1&&1 &&&&&&&&&&&\\ \hline
+ 2 &2\%13 = 2&&1&2&&&&&&&&&&\\ \hline
+ 12&12\%13 = 12&&1&2&&&&&&&&&&12\\ \hline
+ 13&13\%13=0&13&1&2&&&&&&&&&&12\\ \hline
+ 14&14\%13=1&13&1&2&14&&&&&&&&&12\\ \hline
+ 130&130\%13=0&13&1&2&14&130&&&&&&&&12\\ \hline
+ 1212&1212\%13=3&13&1&2&14&130&1212&&&&&&&12\\ \hline
+ 1301&1301\%13=1&13&1&2&14&130&1212&1301&&&&&&12\\ \hline
+ 1300&1300\%13=0&13&1&2&14&130&1212&1301&1300&&&&&12\\ \hline
+\end{tabular}
+}
+
+\subsection{B}
+\noindent\resizebox{\textwidth}{!}{
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| } 
+
+ \hline
+ Key & Calculation & [0] & [1] & [2] & [3] & [4] & [5] & [6] & [7] & [8] & [9] &  [10] & [11] & [12] \\ \hline
+ 1 & 1\%13 = 1 &&1&&&&&&&&&&&\\ \hline
+ 2 &2\%13 = 2&&1&2&&&&&&&&&&\\ \hline
+ 12&12\%13 = 12&&&&&&&&&&&&&12\\ \hline
+ 13&13\%13=0&13&1&2&&&&&&&&&&12\\ \hline
+ 14&14\%13=1, 14\%11=3&13&1&2&&14&&&&&&&&12\\ \hline
+ 130&130\%13=0, 130\%11=9&13&1&2&&14&&&&&130&&&12\\ \hline
+ 1212&1212\%13=3, 1212\%11=2&13&1&2&1212&14&&&&&130&&&12\\ \hline
+ 1301&1301\%13=1,1301\%11=3&13&1&2&1212&14&&&1301&&130&&&12\\ \hline
+ 1300&1300\%13=0, 1300\%11=2&13&1&2&1212&14&&1300&1301&&130&&&12\\ \hline
+
+\end{tabular}
+}
+\section{Question 4}
+\begin{lstlisting}
+C:\Users\bp001\Documents\EECS223\HW8>java Table2
+Trying index [1]
+Trying index [2]
+Trying index [12]
+Trying index [0]
+Trying index [1]
+Trying index [2]
+Trying index [3]
+Trying index [0]
+Trying index [1]
+Trying index [2]
+Trying index [3]
+Trying index [4]
+Trying index [12]
+Trying index [0]
+Trying index [1]
+Trying index [2]
+Trying index [3]
+Trying index [4]
+Trying index [5]
+Trying index [1]
+Trying index [2]
+Trying index [3]
+Trying index [4]
+Trying index [5]
+Trying index [6]
+Trying index [0]
+Trying index [1]
+Trying index [2]
+Trying index [3]
+Trying index [4]
+Trying index [5]
+Trying index [6]
+Trying index [7]
+[0] [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12]
+13 1 2 14 130 1312 1301 1300 null null null null 12
+\end{lstlisting}
+\section{Question 5}
+\begin{lstlisting}
+C:\Users\bp001\Documents\EECS223\HW8>java DoubleHash
+Trying index [1] for 1
+Trying index [2] for 2
+Trying index [12] for 12
+Trying index [0] for 13
+Trying index [1] for 14
+Trying index [4] for 14
+Trying index [0] for 130
+Trying index [9] for 130
+Trying index [3] for 1212
+Trying index [1] for 1301
+Trying index [4] for 1301
+Trying index [7] for 1301
+Trying index [0] for 1300
+Trying index [2] for 1300
+Trying index [4] for 1300
+Trying index [6] for 1300
+[0][1][2][3][4][5][6][7][8][9][10][11][12]
+13 1 2 1212 14 null 1300 1301 null 130 null null 12
+\end{lstlisting}
+\section{Question 6}
+\subsection{A}
+The run time for adding $N$ values to a hash table with no collisions is $O(N)$, because each value in $N$ is being inserted with a single assignment operation, so the total runtime is $1*N$ or $O(N)$
+\subsection{B}
+The runtime of finding a single value to a hash table with no collisions is $O(1)$, because it is a single operation. This is because the hash value is the index where the key is found, due to the assumption of no collisions.
+
+\end{document}

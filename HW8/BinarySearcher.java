@@ -43,15 +43,15 @@ public class BinarySearcher
       for (target = MINIMUM; target <= MAXIMUM; target++)
       {
           System.out.print("Is " + target + " in the array? ");
-          answer = loopSearch(DATA, 0, DATA.length-1, target);
+          answer = searchPrint(DATA, 0, DATA.length-1, target);
           if (answer == -1)
-             System.out.println("No.");
+             System.out.println(" No.");
           else
-             System.out.println("Yes, at index [" + answer + "].");
+             System.out.println();//"Yes, at index [" + answer + "].");
       }
       
       System.out.print("Searching for 0 in an empty array: ");
-      if (loopSearch(EMPTY, 0, 0, 0) == -1)
+      if (searchPrint(EMPTY, 0, 0, 0) == -1)
          System.out.println(" Not found.");
       else
          System.out.println(" Found!");

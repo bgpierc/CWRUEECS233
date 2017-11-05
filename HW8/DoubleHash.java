@@ -1,12 +1,12 @@
-// Chris Fietkiewicz. Based on Table.java from www.cs.colorado.edu/~main
-public class Table2
+//Ben Pierce
+public class DoubleHash
 {
    private int manyItems;
    private Object[ ] keys;
    private Object[ ] data;
    private boolean[ ] hasBeenUsed;   
 
-   public Table2(int capacity)
+   public DoubleHash(int capacity)
    {
       if (capacity <= 0)
          throw new IllegalArgumentException("Capacity is negative");
@@ -28,14 +28,14 @@ public class Table2
       int count = 0;
       int i = hash(key);
 
-      System.out.println("Trying index [" + i + "]");
+      System.out.println("Trying index [" + i + "] for " +key);
       while (count < data.length && hasBeenUsed[i])
       {
          if (key.equals(keys[i]))
             return i;
          count++;
-         i = nextIndex(i);
-         System.out.println("Trying index [" + i + "]");
+         i = nextIndex(i,key);
+         System.out.println("Trying index [" + i + "] for "+key);
       }
       
       return -1;
@@ -53,22 +53,26 @@ public class Table2
    
    
    private int hash(Object key)
-   // The return value is a valid index of the table’s arrays. The index is
-   // calculated as the remainder when the absolute value of the key’s
-   // hash code is divided by the size of the table’s arrays.
+   // The return value is a valid index of the tableâ€™s arrays. The index is
+   // calculated as the remainder when the absolute value of the keyâ€™s
+   // hash code is divided by the size of the tableâ€™s arrays.
    {
       return Math.abs(key.hashCode( )) % data.length;
    }
+
+   private int doubleHash(Object key){
+      return Math.abs(key.hashCode()) % (data.length-2);
+   }
    
    
-   private int nextIndex(int i)
+   private int nextIndex(int i, Object key)
    // The return value is normally i+1. But if i+1 is data.length, then the 
    // return value is zero instead.
    {
-      if (i+1 == data.length)
+      if (i+doubleHash(key) >= data.length)
          return 0;
       else
-         return i+1;
+         return i+doubleHash(key); //if there is a collision, adds an amount that is unique (or at least variable) to each key
    }
    
    public Object put(Object key, Object element)
@@ -86,7 +90,7 @@ public class Table2
       {  // The key is not yet in this Table.
          index = hash(key);
          while (keys[index] != null)
-            index = nextIndex(index);
+            index = nextIndex(index,key);
          keys[index] = key;
          data[index] = element;
          hasBeenUsed[index] = true;
@@ -117,7 +121,7 @@ public class Table2
 
 	public void print() {
 		for (int i = 0; i < keys.length; i++)
-			System.out.print("[" + i + "] ");
+			System.out.print("[" + i + "]");
 		System.out.println();
 		for (int i = 0; i < keys.length; i++)
 			System.out.print(keys[i] + " ");
@@ -125,14 +129,14 @@ public class Table2
 	}
 
 	public static void main(String[] args) {
-		Table2 t = new Table2(13);
+		DoubleHash t = new DoubleHash(13);
 		t.put(1, "X");
 		t.put(2, "X");
 		t.put(12, "X");
 		t.put(13, "X");
 		t.put(14, "X");
 		t.put(130, "X");
-		t.put(1312, "X");
+		t.put(1212, "X");
 		t.put(1301, "X");
 		t.put(1300, "X");
 		t.print();
