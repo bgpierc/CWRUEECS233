@@ -29,7 +29,7 @@ public class Mergesort
       final String BLANKS = "  "; // A String of two blanks
       int i;                      // Array index
 
-      int[ ] data = { 1000, 80, 10, 50, 70, 60, 90, 20, 30, 40, 0, -1000 };
+      int[ ] data = { 80, 10, 50, 70};
 
       // Print the array before sorting:
       System.out.println("Here is the entire original array:");
@@ -38,12 +38,15 @@ public class Mergesort
       System.out.println( );
 
       // Sort the numbers, and print the result with two blanks after each number.
-      mergesort(data, 1, data.length-2);
-      System.out.println("I have sorted all but the first and last numbers.");
-      System.out.println("The numbers are now:");
-      for (i = 0; i < data.length; i++)
-         System.out.print(data[i] + BLANKS);
-      System.out.println( );
+      for(int k = 0; k < data.length; k++)
+         System.out.print("["+k+"]");
+      System.out.println();
+      mergesort(data, 0, data.length);
+
+
+  //    for (i = 0; i < data.length; i++)
+  //       System.out.print(data[i] + BLANKS);
+  //    System.out.println( );
    }
    
    
@@ -78,14 +81,28 @@ public class Mergesort
          n1 = n / 2;
          n2 = n - n1;
 
-         mergesort(data, first, n1);      // Sort data[first] through data[first+n1-1]
-         mergesort(data, first + n1, n2); // Sort data[first+n1] to the end
+         System.out.println("Dividing...");
+         for(int k = first; k < n; k++){
+            if(k == n1){
+               System.out.print(" | ");
+            }
+            System.out.print(data[k]+" ");
+         }
+         System.out.println();
 
+         mergesort(data, first, n1);      // Sort data[first] through data[first+n1-1]   
+         
+         mergesort(data, first + n1, n2); // Sort data[first+n1] to the end
+         
          // Merge the two sorted halves.
          merge(data, first, n1, n2);
+         System.out.println();
       }
    } 
-  
+   private static void prtArr(int[] data){
+      for(int i: data)
+         System.out.print(i+" ");
+   }
    private static void merge(int[ ] data, int first, int n1, int n2)
    // Precondition: data has at least n1 + n2 components starting at data[first]. The first 
    // n1 elements (from data[first] to data[first + n1 – 1] are sorted from smallest 
@@ -105,11 +122,12 @@ public class Mergesort
       // Merge elements, copying from two halves of data to the temporary array.
       while ((copied1 < n1) && (copied2 < n2))
       {
-         if (data[first + copied1] < data[first + n1 + copied2])
+         if (data[first + copied1] >data[first + n1 + copied2])
             temp[copied++] = data[first + (copied1++)];
          else
             temp[copied++] = data[first + n1 + (copied2++)];
       }
+      
 
       // Copy any remaining entries in the left and right subarrays.
       while (copied1 < n1)
@@ -120,7 +138,12 @@ public class Mergesort
       // Copy from temp back to the data array.
       for (i = 0; i < n1+n2; i++)
          data[first + i] = temp[i];
-   }
+      System.out.println("Merged");
+      for(int j: temp)
+         System.out.print(" "+j + " ");
+   }  
+
+
    
 }
 

@@ -29,7 +29,7 @@ public class Insert
       final String BLANKS = "  "; // A String of two blanks
       int i;                      // Array index
 
-      int[ ] data = { 1000, 80, 10, 50, 70, 60, 90, 20, 30, 40, 0, -1000 };
+      int[ ] data = {80, 10, 50, 70, 60, 90, 20, 30, 40, 0 };
 
       // Print the array before sorting:
       System.out.println("Here is the entire original array:");
@@ -38,11 +38,10 @@ public class Insert
       System.out.println( );
 
       // Sort the numbers, and print the result with two blanks after each number.
-      insertionsort(data, 1, data.length-2);
-      System.out.println("I have sorted all but the first and last numbers.");
-      System.out.println("The numbers are now:");
+      insertionsort(data, 0, data.length);
+      System.out.println("Final contents of the array: ");
       for (i = 0; i < data.length; i++)
-         System.out.print(data[i] + BLANKS);
+         System.out.print(data[i]+ " ");
       System.out.println( );
    }
    
@@ -71,13 +70,19 @@ public class Insert
    {
       int i, j;   // Loop control variables
       int entry;  // The element that is currently being inserted
-         
+      for(int k = first; k < n; k++)
+         System.out.print("["+k+"]");
+      System.out.println();
       for (i = 1; i < n; i++)
       {
          entry = data[first+i];
-         for (j = first+i; (j>first) && (data[j-1] > entry); j--) 
+         for (j = first+i; (j>first) && (data[j-1] < entry); j--) 
             data[j] = data[j-1]; 
          data[j] = entry;   
+         for(int k = first; k < n; k++){
+            System.out.print(data[k]+" ");
+         }
+         System.out.println();
       }
   } 
    
