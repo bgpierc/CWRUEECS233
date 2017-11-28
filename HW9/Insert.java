@@ -76,7 +76,7 @@ public class Insert
       for (i = 1; i < n; i++)
       {
          entry = data[first+i];
-         for (j = first+i; (j>first) && (data[j-1] < entry); j--) 
+         for (j = first+i; (j>first) && (data[j-1] > entry); j--) 
             data[j] = data[j-1]; 
          data[j] = entry;   
          for(int k = first; k < n; k++){

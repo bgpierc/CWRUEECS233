@@ -77,7 +77,7 @@ public class Select
          // Calculate small as the index of the smallest value in data[first]...data[first+i]:
          small = first;
          for (j = first+1; j <= first+i; j++)
-            if (data[small] > data[j])
+            if (data[small] < data[j])
                small = j;
       
          // swap data[first+i] with data[small]:
