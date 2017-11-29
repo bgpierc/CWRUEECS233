@@ -1,22 +1,4 @@
-// File: Graph.java from the package EDU.colorado.graphs
-// Complete documentation is available from the Graph link in
-//   http://www.cs.colorado.edu/~main/docs/
-
-//package edu.colorado.graphs;
-
-/******************************************************************************
-* A <CODE>Graph</CODE> is a labeled graph with a fixed number of vertices.
-*
-* <b>Java Source Code for this class:</b>
-*   <A HREF="../../../../edu/colorado/collections/Graph.java">
-*   http://www.cs.colorado.edu/~main/EDU/colorado/collections/Graph.java
-*   </A>
-*
-* @author Michael Main 
-*   <A HREF="mailto:main@colorado.edu"> (main@colorado.edu) </A>
-*
-* @version Feb 10, 2016
-******************************************************************************/
+//Ben Pierce (bgp12)
 import java.util.*;
 public class Graph implements Cloneable
 {
@@ -189,7 +171,7 @@ public class Graph implements Cloneable
       while(q.size()!=0){
          int tmp = q.remove();
          if(marked[tmp] == false){
-            System.out.print(" " + g.getLabel(tmp) + " ");
+            System.out.print(" " + g.getLabel(tmp) + " "); 
             int[] tmp2 = g.neighbors(tmp);
             for(int i: tmp2){
                q.add(i);
