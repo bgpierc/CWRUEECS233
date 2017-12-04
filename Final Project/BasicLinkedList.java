@@ -19,9 +19,14 @@ public class BasicLinkedList<T extends Comparable<T>>{
 	}
 	//adds after a given node
 	public void addAfter(LinkedNode current, T element){
-	 	if(current == null)
+	 	if(element == null)
 	 		throw new NullPointerException("Element cannot be null");
+	 	if(current == null){// there's no head
+	 		append(element);
+	 		return;
+	 	}
 	 	current.setLink(new LinkedNode(element, current.getLink()));
+	 	numNodes++;
 	}
 	//adds to the end
 	public void append(T element){
@@ -43,11 +48,25 @@ public class BasicLinkedList<T extends Comparable<T>>{
 	}
 	//adds an element to maintain a L->G sorted list
 	public void addInOrder(T element){
+
+		if (element == null)
+			throw new NullPointerException("NULL");
+
 		LinkedNode cursor = head;
 		while(cursor != null && cursor.getData().compareTo(element) >0){
 			cursor = cursor.getLink();
+
 		}
+
 		addAfter(cursor,element);
+	}
+	public void addInOrder2(T element){
+		if (element == null)
+			throw new NullPointerException("NULL");
+		LinkedNode cursor = head;
+		if(head == null || head.getData().compareTo(element) > 0){
+			head = new LinkedNode(element,head);
+		}
 	}
 	//returns the largest node in the list
 	public LinkedNode getLargest(){ 
@@ -119,8 +138,10 @@ public class BasicLinkedList<T extends Comparable<T>>{
 	public int size(){
 		int ret = 0;
 		LinkedNode cursor = head;
-		while(cursor != null)
+		while(cursor != null){
 			ret++;
+			cursor = cursor.getLink();
+		}
 		return ret;
 	}
 	public Object[] items(){

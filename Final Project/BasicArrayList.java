@@ -13,7 +13,7 @@ public class BasicArrayList<T extends Comparable<T>>{
 		return t;
 	}
 	public int size(){
-		return upperIndex+1;
+		return upperIndex;
 	}
 	//sets a specific index to a value without increasing the number of elements
 	public void set(int index, T element){
@@ -32,6 +32,7 @@ public class BasicArrayList<T extends Comparable<T>>{
 	//adds an element in a way that maintains the L->G order
 	public void addInOrder(T element){
 	  ensureCapacity(upperIndex*2);
+
 	  int i;
       for(i=0;i<upperIndex;i++){
         if(element.compareTo((T)data[i]) < 0 || data[i] == null)

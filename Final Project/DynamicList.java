@@ -25,12 +25,74 @@ public class DynamicList<T extends Comparable<T>>{
 		this.arr = new BasicArrayList(SIZE);
 		this.linked = new BasicLinkedList();
 		this.hash = new BasicHashTable(SIZE);
+		this.state = 1;
 
 	}
 
 	//0 = arraylist, 1 = linkedlist, 2 = hash tabe
 	public void setState(int stateKey){
-		if(this.
+		if(numElements == 0 ){
+			this.state = stateKey;
+			return;
+		}
+		if(this.state == 0 && stateKey ==1 && !compare(0)){ //from arraylist to linkedList WORKS
+			BasicLinkedList<T> tmp = new BasicLinkedList();
+			if(arr.size() !=0 && numElements != 0){
+				for(int i = 0; i < arr.size(); i++){
+					if(arr.get(i) != null)
+						tmp.addInOrder((T)arr.get(i));
+				}
+			}
+			linked = tmp;
+		}
+		else if(this.state == 0 && stateKey == 2 && !compare(2)){ //from arraylist to hash
+			BasicHashTable<T> tmp = new BasicHashTable(numElements); //TODO: WRITE HASHTABLE ENSURE CAPACITY METHOD
+			for(int i = 0; i < numElements; i++){
+				tmp.put(arr.get(i),arr.get(i));
+			}
+			hash = tmp;
+		}
+		else if(this.state == 1 && stateKey ==0 && !compare(0)){ //from linked to array
+			BasicArrayList<T> tmp = new BasicArrayList(numElements+1);
+			LinkedNode cursor = linked.getHead();
+			while(cursor != null){
+				tmp.addInOrder((T)cursor.getData());
+				cursor = cursor.getLink();
+			}
+			arr = tmp;
+		}
+		else if(this.state == 1 && stateKey == 2 && !compare(1)){ //from linkedlist to hashtable
+			LinkedNode cursor = linked.getHead();
+			BasicHashTable<T> tmp = new BasicHashTable(numElements+1);
+			int i = 0;
+			while(cursor != null){
+				tmp.put((T)cursor.getData(),(T)cursor.getData());
+				cursor = cursor.getLink();
+			}
+			hash = tmp;
+		}
+		else if(this.state == 2 && stateKey==0 &&  !compare(2)){ //from hash to array
+			BasicArrayList<T> tmp = new BasicArrayList(numElements+1);
+			Object[] items = hash.items();
+			for(int i = 0; i < items.length; i++){
+				tmp.addInOrder((T)items[i]);
+			}
+			arr = tmp;
+		}
+		else if(this.state == 2 && stateKey ==1 && !compare(1)){//from hash to linked
+			BasicLinkedList<T> tmp = new BasicLinkedList();
+			Object[] items = hash.items();
+			for(int i = 0; i < items.length; i++){
+				tmp.addInOrder((T)items[i]);
+			}
+			linked  = tmp;
+		}
+		else if(this.state == stateKey){
+			return;
+		}
+		else
+			throw new IllegalArgumentException("Incorrenct state key entered");
+		
 		this.state = stateKey;
 	}
 	// The time constant system is how the data structure adapts to its situations
@@ -58,18 +120,17 @@ public class DynamicList<T extends Comparable<T>>{
 		if(numElements>=HASH_THRESHOLD){ //if we've got a lot of data, we're using a hash table. Otherwise, it's crap.
 			setState(2);
 		}
-		else if(addInOrder > 0){
-			if(smallest == sumArr){
-				setState(0);
+		else if(smallest == sumArr){
+			setState(0);
 			}
-			else if(smallest == sumLink){
-				setState(1);
-			}
-			else
-				setState(0);
+		else if(smallest == sumLink){
+			setState(1);
+		}
+		else
+			setState(0);
 		}
 		
-	}
+	
 
 	public int lowest(int... elements){
 		int smallest = elements[0]; 
@@ -81,7 +142,11 @@ public class DynamicList<T extends Comparable<T>>{
 	}
 
 	public void addInPlace(T element, T key){
-		chooseStructure();
+		if(element == null){
+			throw new IllegalArgumentException("Null cannot be added!");
+		}
+
+		//chooseStructure();
 		if(state == 2 && key != null){
 			hash.put(element,key); //add in place meaningless for hashtable.
 		}
@@ -92,9 +157,10 @@ public class DynamicList<T extends Comparable<T>>{
 			linked.addInOrder(element);
 		}
 		addInOrder++;
+		numElements++;
 	}
 	public void removeLargest(){
-		chooseStructure();
+		//chooseStructure();
 		if (state == 0){
 			arr.removeLargest();
 		}
@@ -105,9 +171,10 @@ public class DynamicList<T extends Comparable<T>>{
 			hash.removeLargest();
 		}
 		removeLargest++;
+		numElements--;
 	}
 	public Object search(T target){
-		chooseStructure();
+		//chooseStructure();
 		if(state == 0){
 			return arr.search(target);
 		}
@@ -123,7 +190,7 @@ public class DynamicList<T extends Comparable<T>>{
 
 	public void print(){
 		if(state == 0){
-			System.out.println("ArrayList: ");
+			System.out.print("ArrayList: ");
 			arr.print();
 		}
 		else if(state ==1){
@@ -136,6 +203,7 @@ public class DynamicList<T extends Comparable<T>>{
 	}
 	//arguemnt: which comparison: 0= linked-arr, 1= linked-hash, 2=arr-hash
 	public boolean compare(int a){
+		
 		if(a == 0){
 			LinkedNode cursor = linked.getHead();
 			if(linked.size() != arr.size())
@@ -144,6 +212,7 @@ public class DynamicList<T extends Comparable<T>>{
 				if(cursor.getData().compareTo(arr.get(i)) != 0)
 					return false;
 				cursor = cursor.getLink();
+
 			}
 			return true;
 		}
