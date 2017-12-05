@@ -17,25 +17,21 @@ public class DynamicList<T extends Comparable<T>>{
 
 
 	private int numElements;
-	private int state = 0;
+	private int state;
 
-	public DynamicList(int size){
+	public DynamicList(int size){ 
 		this.SIZE = size;
 		this.numElements = 0;
 		this.arr = new BasicArrayList(SIZE);
 		this.linked = new BasicLinkedList();
-		this.hash = new BasicHashTable(SIZE);
-		this.state = 1;
+		this.hash = new BasicHashTable(500000); //TODO: HASH TABLE SIZE ADAPT
+		this.state = 0;
 
 	}
 
 	//0 = arraylist, 1 = linkedlist, 2 = hash tabe
 	public void setState(int stateKey){
-		if(numElements == 0 ){
-			this.state = stateKey;
-			return;
-		}
-		if(this.state == 0 && stateKey ==1 && !compare(0)){ //from arraylist to linkedList WORKS
+		if(this.state == 0&& stateKey ==1&&!compare(0)){ //from arraylist to linkedList WORKS
 			BasicLinkedList<T> tmp = new BasicLinkedList();
 			if(arr.size() !=0 && numElements != 0){
 				for(int i = 0; i < arr.size(); i++){
@@ -74,6 +70,9 @@ public class DynamicList<T extends Comparable<T>>{
 		else if(this.state == 2 && stateKey==0 &&  !compare(2)){ //from hash to array
 			BasicArrayList<T> tmp = new BasicArrayList(numElements+1);
 			Object[] items = hash.items();
+			for(Object x: items){
+				System.out.print((T)x + " ");
+			}
 			for(int i = 0; i < items.length; i++){
 				tmp.addInOrder((T)items[i]);
 			}
@@ -86,13 +85,7 @@ public class DynamicList<T extends Comparable<T>>{
 				tmp.addInOrder((T)items[i]);
 			}
 			linked  = tmp;
-		}
-		else if(this.state == stateKey){
-			return;
-		}
-		else
-			throw new IllegalArgumentException("Incorrenct state key entered");
-		
+		}		
 		this.state = stateKey;
 	}
 	// The time constant system is how the data structure adapts to its situations
@@ -228,13 +221,17 @@ public class DynamicList<T extends Comparable<T>>{
 			return (Arrays.equals(hashContents,linkedContents)); 
 		}
 		else if(a==2){
-			Object[] hashContents = hash.items();
-			Arrays.sort(hashContents);
-			return Arrays.equals(hashContents,arr.items());
-		}
+			return compareArrays(hash.items(),arr.items());
+			}	
+		
 		else
 			throw new IllegalArgumentException("Bad arguement");
 			
+		}
+	public static boolean compareArrays(Object[] arr1, Object[] arr2) {
+    	HashSet<Object> set1 = new HashSet<Object>(Arrays.asList(arr1));
+    	HashSet<Object> set2 = new HashSet<Object>(Arrays.asList(arr2));
+    	return set1.equals(set2);
 	}
 
 

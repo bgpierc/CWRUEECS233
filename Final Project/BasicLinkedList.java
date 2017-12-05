@@ -18,14 +18,21 @@ public class BasicLinkedList<T extends Comparable<T>>{
 		numNodes++;
 	}
 	//adds after a given node
-	public void addAfter(LinkedNode current, T element){
+	public void addAfter(LinkedNode current, LinkedNode before, T element){
 	 	if(element == null)
-	 		throw new NullPointerException("Element cannot be null");
-	 	if(current == null){// there's no head
-	 		append(element);
+	 		throw new NullPointerException("null");
+	 	if(before == null){
+	 		add(element);
+	 	}
+	 	else if(current == null){
+	 		
+	 		before.setLink(new LinkedNode(element,null));
+	 		numNodes++;
 	 		return;
 	 	}
-	 	current.setLink(new LinkedNode(element, current.getLink()));
+
+	 	else
+	 		current.setLink(new LinkedNode(element, current.getLink()));
 	 	numNodes++;
 	}
 	//adds to the end
@@ -39,33 +46,31 @@ public class BasicLinkedList<T extends Comparable<T>>{
 			cursor = cursor.getLink();
 		}
 		cursor.setLink(new LinkedNode(element, null));
+		numNodes++;
 	}
 	//adds a bunch of elements to the end
 	public void addAll(T...elements){
 		for(T t:elements){
 			append(t);
 		}
+		numNodes+=elements.length;
 	}
 	//adds an element to maintain a L->G sorted list
 	public void addInOrder(T element){
-
-		if (element == null)
-			throw new NullPointerException("NULL");
-
-		LinkedNode cursor = head;
-		while(cursor != null && cursor.getData().compareTo(element) >0){
-			cursor = cursor.getLink();
-
+		LinkedNode insert;
+		LinkedNode cursor;
+		if(head == null || head.getData().compareTo(element) >= 0){
+			insert = new LinkedNode(element,head);
+			head = insert;
+			numNodes++;
 		}
-
-		addAfter(cursor,element);
-	}
-	public void addInOrder2(T element){
-		if (element == null)
-			throw new NullPointerException("NULL");
-		LinkedNode cursor = head;
-		if(head == null || head.getData().compareTo(element) > 0){
-			head = new LinkedNode(element,head);
+		else{
+			cursor = head;
+			while(cursor.getLink() != null && cursor.getLink().getData().compareTo(element) < 0)
+				cursor = cursor.getLink();
+			insert = new LinkedNode(element,cursor.getLink());
+			cursor.setLink(insert);
+			numNodes++;
 		}
 	}
 	//returns the largest node in the list

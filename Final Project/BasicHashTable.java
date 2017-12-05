@@ -28,14 +28,12 @@ public class BasicHashTable<T extends Comparable<T>>{
       int count = 0;
       int i = hash(key);
 
-      System.out.println("Trying index [" + i + "]");
       while (count < data.length && hasBeenUsed[i])
       {
          if (key.equals(keys[i]))
             return i;
          count++;
          i = nextIndex(i);
-         System.out.println("Trying index [" + i + "]");
       }
       
       return -1;
@@ -165,7 +163,7 @@ public class BasicHashTable<T extends Comparable<T>>{
 	public Object[] items(){
 		Object[] ret = new Object[manyItems];
 		int j = 0;
-		for(int i = 0; i < data.length-1;i++){
+		for(int i = 0; i < data.length;i++){
 			if(data[i] != null){
 				ret[j] = data[i];
 				j++;
