@@ -1,5 +1,5 @@
 //Ben Pierce (bgp12)
-//Basically copied from HW8. There's not really changes I need to make on HashTable
+//Basically copied from HW8, with the addition of generics. There's not really changes I need to make on HashTable. 
 public class BasicHashTable<T extends Comparable<T>>{
    private int manyItems;
    private Object[ ] keys;
@@ -96,13 +96,13 @@ public class BasicHashTable<T extends Comparable<T>>{
       }
       else
       {  // The table is full.
-         throw new IllegalStateException("Table is full.");
+         throw new IllegalStateException("Table is full."); //TODO: ADD INCREASE CAPACITY METHOD
       }
    }
-      
+   //Removes object with key
    public Object remove(T key1)
    {
-   	  Object key = (Object)key1;
+   	Object key = (Object)key1;
       int index = findIndex(key);
       Object answer = null;
       
@@ -116,7 +116,7 @@ public class BasicHashTable<T extends Comparable<T>>{
       
       return answer;
    }
-
+   //remove object with index
    public Object remove(int index){
    	 Object ret = data[index];
    	 keys[index] = null;
@@ -124,23 +124,34 @@ public class BasicHashTable<T extends Comparable<T>>{
    	 manyItems--;
    	 return ret;
    }
-
-   public Object removeLargest(){
-   		return remove(getLargest());
+   //removes largest
+  public void removeLargest(){
+      remove(getLargest());
    }
-
+   //returns index of largest element
    public int getLargest(){
-    	T largest = (T)data[0];
-    	int largestIndex = 0;
-    	for(int i = 0; i <= data.length-1; i++){
-    		if(largest.compareTo((T)data[i]) < 0){
-    			largest = (T) data[i];
-    			largestIndex=i;
-    		}
-    	}
-    	return largestIndex;
+      if(manyItems ==0 || data.length == 0){
+         throw new IllegalStateException("Cannot remove from empty list");
+      }
+      T largest = (T)data[0]; 
+      int largestIndex = -1;
+      for(int i = 0; i <data.length; i++){
+         if(data[i] != null){
+            largestIndex = i;
+            largest = (T)data[i];
+         }
+      }
+      for(int i = 0; i < data.length; i++){
+         if(data[i] != null){
+            if(largest.compareTo((T)data[i]) < 0){
+               largest = (T) data[i];
+               largestIndex=i;
+            }
+         }
+      }
+      return largestIndex;
     }
-
+   //prints the hashtable
 	public void print() {
 		for (int i = 0; i < keys.length; i++)
 			System.out.print("[" + i + "] ");
@@ -149,6 +160,16 @@ public class BasicHashTable<T extends Comparable<T>>{
 			System.out.print(keys[i] + " ");
 		System.out.println();
 	}
+
+   @Override
+   public String toString(){
+      String ret ="";
+      for (int i = 0; i < keys.length; i++)
+         ret += keys[i];
+      return ret;
+   }
+
+   //linear search for target
 	public int search(T target){
 		for(int i = 0; i < data.length -1; i++){
 			if(target.compareTo((T)data[i])==0){
@@ -157,9 +178,11 @@ public class BasicHashTable<T extends Comparable<T>>{
 		}
 	return -1;
 	}
+   //returns number of elements in table
 	public int size(){
 		return manyItems;
 	}
+   //returns object array of all items in the table that exist (ie are not null)
 	public Object[] items(){
 		Object[] ret = new Object[manyItems];
 		int j = 0;

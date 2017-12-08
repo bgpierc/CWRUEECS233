@@ -31,7 +31,7 @@ public class DynamicList<T extends Comparable<T>>{
 
 	//0 = arraylist, 1 = linkedlist, 2 = hash tabe
 	public void setState(int stateKey){
-		if(this.state == 0&& stateKey ==1&&!compare(0)){ //from arraylist to linkedList WORKS
+		if(this.state == 0 && stateKey ==1 && !compare(0)){ //from arraylist to linkedList WORKS
 			BasicLinkedList<T> tmp = new BasicLinkedList();
 			if(arr.size() !=0 && numElements != 0){
 				for(int i = 0; i < arr.size(); i++){
@@ -91,6 +91,11 @@ public class DynamicList<T extends Comparable<T>>{
 	// The time constant system is how the data structure adapts to its situations
 	// it is computed by multiplying the number of times the strucutre performs an
 	// operation by its time complexity with respect to number of elements
+	//
+	//Honestly idk what I'm going to do with this. I don't think it's the right approach here.
+	//I'm also not convinced this is useful functionality
+	//I can't think of a situation where I would want the program to randomly switch structures without my command to do so.
+	//See last paragraph of progress report
 	public void chooseStructure(){
 		//best = smallest
 		int timeConstantAddArr = addInOrder*(3*numElements); // 3 loops
@@ -123,8 +128,10 @@ public class DynamicList<T extends Comparable<T>>{
 			setState(0);
 		}
 		
-	
-
+	public int size(){
+		return numElements;
+	}
+	//finds the smallest of an array of elements
 	public int lowest(int... elements){
 		int smallest = elements[0]; 
 		for(int i: elements){
@@ -133,13 +140,11 @@ public class DynamicList<T extends Comparable<T>>{
 		}
 		return smallest;
 	}
-
+	//adds in place
 	public void addInPlace(T element, T key){
 		if(element == null){
-			throw new IllegalArgumentException("Null cannot be added!");
+			throw new IllegalArgumentException("Null cannot be added!"); //duh
 		}
-
-		//chooseStructure();
 		if(state == 2 && key != null){
 			hash.put(element,key); //add in place meaningless for hashtable.
 		}
@@ -181,20 +186,24 @@ public class DynamicList<T extends Comparable<T>>{
 		return -1;
 	}
 
+	public Object get(T key){
+		return hash.get(key);
+	}
+
 	public void print(){
 		if(state == 0){
-			System.out.print("ArrayList: ");
-			arr.print();
+			System.out.print("ArrayList: " + arr.toString());
 		}
 		else if(state ==1){
 			System.out.println("LinkedList: "  + linked.toString());
 		}
 		else if(state == 2){
 			System.out.println("HashTable: ");
-			hash.print();
+			hash.print(); //I like this formatting for hashtable better
 		}
 	}
-	//arguemnt: which comparison: 0= linked-arr, 1= linked-hash, 2=arr-hash
+	//arguement: which comparison: 0= linked-arr, 1= linked-hash, 2=arr-hash
+	//not the best system but it works
 	public boolean compare(int a){
 		
 		if(a == 0){
@@ -214,11 +223,7 @@ public class DynamicList<T extends Comparable<T>>{
 			if(linked.size() != hash.size()){
 				return false;
 			}
-			Object[] hashContents = hash.items();
-			Object[] linkedContents = linked.items();
-			Arrays.sort(hashContents);
-			Arrays.sort(linkedContents);
-			return (Arrays.equals(hashContents,linkedContents)); 
+			return compareArrays(linked.items(),arr.items());
 		}
 		else if(a==2){
 			return compareArrays(hash.items(),arr.items());
@@ -227,11 +232,27 @@ public class DynamicList<T extends Comparable<T>>{
 		else
 			throw new IllegalArgumentException("Bad arguement");
 			
-		}
+	}
+	//compares arrays with hashset
 	public static boolean compareArrays(Object[] arr1, Object[] arr2) {
     	HashSet<Object> set1 = new HashSet<Object>(Arrays.asList(arr1));
     	HashSet<Object> set2 = new HashSet<Object>(Arrays.asList(arr2));
     	return set1.equals(set2);
+	}
+
+	public void add(T element,T key){
+		if(this.state == 0){
+			arr.add(element);
+		}
+		else if(this.state == 1){
+			linked.add(element);
+		}
+		else if(this.state == 2){
+			hash.put(element,key);
+		}
+		else
+			throw new IllegalStateException("state/arguement combo not correct");
+		numElements++;
 	}
 
 

@@ -31,18 +31,17 @@ public class BasicArrayList<T extends Comparable<T>>{
 	}
 	//adds an element in a way that maintains the L->G order
 	public void addInOrder(T element){
-	  ensureCapacity(upperIndex*2);
-
+	  ensureCapacity(upperIndex*2); //might be overkill
 	  int i;
       for(i=0;i<upperIndex;i++){
         if(element.compareTo((T)data[i]) < 0 || data[i] == null)
           break; // yeah yeah dont use break sorry
       }
       for(int k=upperIndex-1; k>=i; k--){
-        data[k+1]=data[k];            
+        data[k+1]=data[k];//shift        
       }
       data[i]=(Object)element;
-	  upperIndex++;
+	  upperIndex++; //add
 	}
 	public void ensureCapacity(int minimumCapacity)
     {
@@ -55,6 +54,7 @@ public class BasicArrayList<T extends Comparable<T>>{
          data = biggerArray;
       }
     }
+    //returns index of largest element
     public int getLargest(){
     	T largest = (T)data[0];
     	int largestIndex = 0;
@@ -66,6 +66,7 @@ public class BasicArrayList<T extends Comparable<T>>{
     	}
     	return largestIndex;
     }
+    //removes largest element
     public void removeLargest(){
     	int largestIndex = getLargest();
     	for(int i = largestIndex; i < upperIndex;i++){
@@ -73,7 +74,8 @@ public class BasicArrayList<T extends Comparable<T>>{
     	}
     	upperIndex--;
     }
-
+    //linear search for target element
+    //returns index of element
     public int search(T target){
     	for(int i = 0; i < upperIndex; i++){
     		if(target.compareTo((T)data[i])==0){
@@ -92,6 +94,17 @@ public class BasicArrayList<T extends Comparable<T>>{
 		// 	System.out.print(data[i].toString()+ " ");
 		// }
 	}
+	@Override
+	public String toString(){
+		String ret = "";
+		for(int i = 0; i < upperIndex;i++){
+			ret+=data[i].toString();
+			ret+= " ";
+		}
+		return ret;
+	}
+	//returns object array of the items in the arr
+	//for compare method
 	public Object[] items(){
 		Object[] ret = new Object[upperIndex];
 		for(int i = 0; i < upperIndex; i++){
